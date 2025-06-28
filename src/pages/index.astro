@@ -2,55 +2,57 @@
 import { Content } from "../content/about.md";
 import Layout from "../layouts/Layout.astro";
 import headshot from "../assets/headshot.jpg";
+import "../styles/index.scss";
 ---
 
 <Layout>
   <div class="container">
-    <div class="frame-piece top"></div>
-    <img src={headshot.src} alt="Teddy Zamborsky headshot" />
-    <div class="frame-piece bottom"></div>
+    <div class="headshot">
+      <div class="frame-piece top"></div>
+      <img src={headshot.src} alt="Teddy Zamborsky headshot" />
+      <div class="frame-piece bottom"></div>
+    </div>
+    <Content />
   </div>
-  <Content />
 </Layout>
 
 <style lang="scss">
   .container {
-    float: right;
-    margin: 4rem 0 10px 10px;
-    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .headshot {
+    float: none;
     height: fit-content;
     position: relative;
     display: flex;
-    width: clamp(200px, 30vw, 300px);
+    margin-top: 1rem;
+
+    width: clamp(200px, 30vw, 350px);
+    container-type: inline-size;
   }
   img {
     object-fit: contain;
     width: 100%;
-    margin: 9px;
+    border-radius: 10% 0 10% 0px;
+    padding: 5cqw;
   }
 
   .frame-piece {
-    width: 40px;
-    height: 40px;
+    width: 20%;
+    height: 20%;
     position: absolute;
+    --dot-frame-piece: clamp(5px, 3cqw, 10px) double var(--tertiaryAccent);
+    --inner-frame-piece: clamp(3px, 2cqw, 8px) solid var(--primaryAccent);
 
-    --dot-frame-piece: 5px dotted var(--secondaryAccent);
-
-    &:before,
     &:after {
       content: "";
       background: var(--primaryAccent);
       position: absolute;
-    }
-
-    &:before {
-      width: 80%;
-      height: 4px;
-    }
-
-    &:after {
-      height: 80%;
-      width: 4px;
+      width: 14.125cqw;
+      height: 14.125cqw;
+      background: transparent;
     }
 
     &.top {
@@ -59,13 +61,11 @@ import headshot from "../assets/headshot.jpg";
       border-top: var(--dot-frame-piece);
       border-right: var(--dot-frame-piece);
 
-      &:before {
-        top: 2px;
-        left: 4px;
-      }
       &:after {
-        right: 2px;
-        top: 2px;
+        top: 1cqw;
+        right: 1cqw;
+        border-top: var(--inner-frame-piece);
+        border-right: var(--inner-frame-piece);
       }
     }
 
@@ -75,14 +75,22 @@ import headshot from "../assets/headshot.jpg";
       border-bottom: var(--dot-frame-piece);
       border-left: var(--dot-frame-piece);
 
-      &:before {
-        bottom: 2px;
-        left: 2px;
-      }
       &:after {
-        left: 2px;
-        top: 4px;
+        left: 1cqw;
+        bottom: 1cqw;
+        border-bottom: var(--inner-frame-piece);
+        border-left: var(--inner-frame-piece);
       }
+    }
+  }
+
+  @media (min-width: 483px) {
+    .container {
+      display: block;
+    }
+    .headshot {
+      float: right;
+      margin: 3.5rem -9px 10px 10px;
     }
   }
 </style>
