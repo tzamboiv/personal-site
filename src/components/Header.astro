@@ -1,0 +1,50 @@
+---
+const { pathname } = Astro.url;
+const getClass = (pageName: string) =>
+  pathname.slice(1) === pageName ? "active" : "";
+---
+
+<header>
+  <a href="/" class={getClass("")}>About</a>
+  <a href="/cv" class={getClass("cv")}>CV</a>
+  <a href="/links" class={getClass("links")}>Links</a>
+  <a href="https://blog.tzamborsky.com" target="_blank">Blog</a>
+</header>
+
+<style lang="scss">
+  header {
+    padding-block: 25px;
+    width: 100%;
+    display: flex;
+    gap: 1.5rem;
+    position: sticky;
+    top: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 255, 255, 0.9) 80%,
+      rgba(255, 255, 255, 0.8) 90%,
+      transparent 100%
+    );
+    z-index: 1;
+  }
+
+  a {
+    color: var(--text);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &.active {
+      text-decoration: underline double var(--primaryAccent) 2px;
+    }
+
+    &:hover {
+      background: transparent;
+    }
+
+    &:hover:not(&.active) {
+      text-decoration: underline var(--primaryAccent) 2px;
+    }
+  }
+</style>

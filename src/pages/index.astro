@@ -1,0 +1,88 @@
+---
+import { Content } from "../content/about.md";
+import Layout from "../layouts/Layout.astro";
+import headshot from "../assets/headshot.jpg";
+---
+
+<Layout>
+  <div class="container">
+    <div class="frame-piece top"></div>
+    <img src={headshot.src} alt="Teddy Zamborsky headshot" />
+    <div class="frame-piece bottom"></div>
+  </div>
+  <Content />
+</Layout>
+
+<style lang="scss">
+  .container {
+    float: right;
+    margin: 4rem 0 10px 10px;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    width: clamp(200px, 30vw, 300px);
+  }
+  img {
+    object-fit: contain;
+    width: 100%;
+    margin: 9px;
+  }
+
+  .frame-piece {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+
+    --dot-frame-piece: 5px dotted var(--secondaryAccent);
+
+    &:before,
+    &:after {
+      content: "";
+      background: var(--primaryAccent);
+      position: absolute;
+    }
+
+    &:before {
+      width: 80%;
+      height: 4px;
+    }
+
+    &:after {
+      height: 80%;
+      width: 4px;
+    }
+
+    &.top {
+      top: 0;
+      right: 0;
+      border-top: var(--dot-frame-piece);
+      border-right: var(--dot-frame-piece);
+
+      &:before {
+        top: 2px;
+        left: 4px;
+      }
+      &:after {
+        right: 2px;
+        top: 2px;
+      }
+    }
+
+    &.bottom {
+      bottom: 0;
+      left: 0;
+      border-bottom: var(--dot-frame-piece);
+      border-left: var(--dot-frame-piece);
+
+      &:before {
+        bottom: 2px;
+        left: 2px;
+      }
+      &:after {
+        left: 2px;
+        top: 4px;
+      }
+    }
+  }
+</style>

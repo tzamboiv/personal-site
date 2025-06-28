@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #ffffff;
+  --primaryAccent: #9e24ff;
+  --secondaryAccent: #ff9fff;
+  --tertiaryAccent: #33beae;
+  --text: #201925;
+
+  color: var(--text);
+  font-family: "Quicksand", sans-serif;
+
+  header, main {
+    max-width: 1200px;
+    padding-inline: clamp(20px, 10vw, 80px);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Alegreya", serif;
+  }
+
+  a {
+    color: var(--text);
+    text-decoration-color: var(--tertiaryAccent);
+    text-decoration-thickness: 2px;
+
+    &:hover {
+      background: color-mix(in srgb, var(--tertiaryAccent) 20%, var(--white) 80%);
+    }
+  }
+}
