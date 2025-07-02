@@ -7,3 +7,7 @@
  - [_Visions, values, voices: a survey of artificial intelligence researchers_](https://zenodo.org/records/15118399)
 
  - [Nature Magazine article about the _Visions_ survey](https://www.nature.com/articles/d41586-025-01123-x)
+
+ - [Google Scholar Profile](https://scholar.google.com/citations?user=5doUO4EAAAAJ&hl=en)
+
+ - [ORCID: 0009-0002-3849-6673](https://orcid.org/0009-0002-3849-6673)
