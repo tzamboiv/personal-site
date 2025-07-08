@@ -6,8 +6,8 @@ const getClass = (pageName: string) =>
 
 <header>
   <a href="/" class={getClass("")}>About</a>
-  <a href="/cv" class={getClass("cv")}>C.V.</a>
   <a href="/links" class={getClass("links")}>Links</a>
+  <a href="/cv.pdf" class={getClass("cv")} target="_blank">C.V.</a>
   <a href="https://blog.tzamborsky.com" target="_blank">Blog</a>
 </header>
 
@@ -16,6 +16,7 @@ const getClass = (pageName: string) =>
     padding-block: 25px;
     width: 100%;
     display: flex;
+    justify-content: space-evenly;
     gap: 1.5rem;
     position: sticky;
     top: 0;
@@ -27,6 +28,10 @@ const getClass = (pageName: string) =>
       transparent 100%
     );
     z-index: 1;
+
+    @media (min-width: 483px) {
+      justify-content: flex-start;
+    }
   }
 
   a {
