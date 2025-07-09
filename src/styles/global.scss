@@ -12,13 +12,9 @@
   color: var(--text);
   font-family: "Quicksand", sans-serif;
 
-  header, main {
+  header, main, footer {
     max-width: 1200px;
     padding-inline: clamp(20px, 10vw, 80px);
-  }
-
-  main {
-    margin-top: 1rem;
   }
 
   h1,
@@ -39,6 +35,12 @@
 
     &:hover {
       background: color-mix(in srgb, var(--tertiaryAccent) 20%, var(--white) 80%);
+    }
+  }
+
+  @media (min-width: 483px) {
+    main {
+      margin-top: 1rem;
     }
   }
 }

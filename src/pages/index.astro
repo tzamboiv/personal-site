@@ -3,6 +3,20 @@ import { Content } from "../content/about.md";
 import Layout from "../layouts/Layout.astro";
 import headshot from "../assets/headshot.jpg";
 import "../styles/index.scss";
+import { library, icon } from "@fortawesome/fontawesome-svg-core";
+import {
+  faOrcid,
+  faLinkedin,
+  faGoogleScholar,
+} from "@fortawesome/free-brands-svg-icons";
+
+library.add(faOrcid, faGoogleScholar, faLinkedin);
+const orcidIcon = icon({ prefix: "fab", iconName: faOrcid.iconName });
+const googleScholarIcon = icon({
+  prefix: "fab",
+  iconName: faGoogleScholar.iconName,
+});
+const linkedinIcon = icon({ prefix: "fab", iconName: faLinkedin.iconName });
 ---
 
 <Layout>
@@ -13,6 +27,29 @@ import "../styles/index.scss";
       <div class="frame-piece bottom"></div>
     </div>
     <Content />
+    <div class="profiles">
+      <a
+        href="https://orcid.org/0009-0002-3849-6673"
+        target="_blank"
+        title="ORCID"
+      >
+        <Fragment set:html={orcidIcon?.html} />
+      </a>
+      <a
+        href="https://scholar.google.com/citations?user=5doUO4EAAAAJ&hl=en"
+        target="_blank"
+        title="Google Scholar"
+      >
+        <Fragment set:html={googleScholarIcon?.html} />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/tzamborsky/"
+        target="_blank"
+        title="LinkedIn"
+      >
+        <Fragment set:html={linkedinIcon?.html} />
+      </a>
+    </div>
   </div>
 </Layout>
 
@@ -22,13 +59,29 @@ import "../styles/index.scss";
     flex-direction: column;
     align-items: center;
   }
+
+  .profiles {
+    display: flex;
+    flex-direction: row;
+    height: 34px;
+    gap: 17px;
+    margin-top: 10px;
+
+    a {
+      display: flex;
+      color: var(--tertiaryAccent);
+      &:hover {
+        background: transparent;
+        color: color-mix(in srgb, var(--tertiaryAccent) 90%, #000 10%);
+      }
+    }
+  }
   .headshot {
     float: none;
     height: fit-content;
     position: relative;
     display: flex;
-    margin-top: 1rem;
-
+    margin-bottom: 1rem;
     width: clamp(200px, 30vw, 350px);
     container-type: inline-size;
   }

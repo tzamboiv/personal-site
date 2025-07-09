@@ -1,5 +1,19 @@
 h1 {
   width: 100%;
+  position: relative;
+  width: fit-content;
+  white-space: nowrap;
+
+  &::before {
+    content: '';
+    width: 6.25rem;
+    height: 3px;
+    border-bottom: 3px dotted var(--primaryAccent);
+    right: 0;
+    bottom: 3.5px;
+    z-index: -1;
+    position: absolute;
+  }
 }
 
 p:first-of-type {

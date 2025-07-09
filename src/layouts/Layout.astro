@@ -10,7 +10,7 @@ import Header from "../components/Header.astro";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png+xml" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
-    <title>Teddy Zamborsky Personal Site</title>
+    <title>Teddy Zamborsky</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,7 +25,11 @@ import Header from "../components/Header.astro";
     </main>
   </body>
   <footer>
-    © {new Date().getFullYear()} Teddy Zamborsky
+    <div>
+      Made with ♡ by Danielle Rubin · Logo design by Wil Roos · © {
+        new Date().getFullYear()
+      } Teddy Zamborsky
+    </div>
   </footer>
 </html>
 
@@ -54,7 +58,7 @@ import Header from "../components/Header.astro";
   }
 
   footer {
-    padding: 0.75rem;
+    padding-block: 0.75rem;
     font-size: 0.8rem;
   }
 </style>
