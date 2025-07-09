@@ -7,15 +7,14 @@
 
   li {
     border-left: 3px dotted var(--primaryAccent);
-    padding-left: 0.75rem;
+    padding-left: 0.65rem;
     margin-bottom: 2rem;
 
     p {
-      margin-block: 0.35rem;
+      margin-block: 0.3rem;
     }
 
     p:has(a) {
-      max-width: 700px;
       a {
         font-weight: bold;
       }
