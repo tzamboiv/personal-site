@@ -17,4 +17,8 @@
 
   A friend from my MSc started a podcast where he plans to interview a few of us about our research. I was the first guest. 
 
+- <a href="https://boundary-work.com/issue-one" target="_blank"><i>BOUNDARY WORK ZINE</i> issue 1</a>
+
+  I helped to edit the first issue of <i>BOUNDARY WORK ZINE</i>, a zine that features writing that "collapse[s], contest[s] or ignore[s] completely" the boundary between science and art
+
 
