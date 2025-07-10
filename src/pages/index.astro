@@ -8,15 +8,17 @@ import {
   faOrcid,
   faLinkedin,
   faGoogleScholar,
+  faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
-library.add(faOrcid, faGoogleScholar, faLinkedin);
+library.add(faOrcid, faGoogleScholar, faLinkedin, faGithub);
 const orcidIcon = icon({ prefix: "fab", iconName: faOrcid.iconName });
 const googleScholarIcon = icon({
   prefix: "fab",
   iconName: faGoogleScholar.iconName,
 });
 const linkedinIcon = icon({ prefix: "fab", iconName: faLinkedin.iconName });
+const gitHubIcon = icon({ prefix: "fab", iconName: faGithub.iconName });
 ---
 
 <Layout>
@@ -49,6 +51,9 @@ const linkedinIcon = icon({ prefix: "fab", iconName: faLinkedin.iconName });
       >
         <Fragment set:html={linkedinIcon?.html} />
       </a>
+      <a href="https://github.com/tzamboiv/" target="_blank" title="GitHub">
+        <Fragment set:html={gitHubIcon?.html} />
+      </a>
     </div>
   </div>
 </Layout>
@@ -65,14 +70,16 @@ const linkedinIcon = icon({ prefix: "fab", iconName: faLinkedin.iconName });
     flex-direction: row;
     height: 34px;
     gap: 17px;
-    margin-top: 10px;
+    margin-top: 1rem;
 
     a {
       display: flex;
       color: var(--tertiaryAccent);
+      transition: color 0.1s;
       &:hover {
         background: transparent;
         color: color-mix(in srgb, var(--tertiaryAccent) 90%, #000 10%);
+        color: var(--primaryAccent);
       }
     }
   }
@@ -143,7 +150,15 @@ const linkedinIcon = icon({ prefix: "fab", iconName: faLinkedin.iconName });
     }
     .headshot {
       float: right;
-      margin: 3.5rem -9px 10px 10px;
+      margin: 4rem -9px 10px 10px;
+
+      img {
+        margin-top: -5cqw;
+      }
+
+      .frame-piece.top {
+        margin-top: -5cqw;
+      }
     }
   }
 </style>

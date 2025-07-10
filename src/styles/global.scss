@@ -11,6 +11,7 @@
 
   color: var(--text);
   font-family: "Quicksand", sans-serif;
+  line-height: 1.4;
 
   header, main, footer {
     max-width: 1200px;
@@ -22,6 +23,7 @@
   h3,
   h4 {
     font-family: "IBM Plex Serif", serif;
+    margin-block: 1.25rem;
 
     &:first-of-type {
       margin-top: 0;
@@ -34,7 +36,7 @@
     text-decoration-thickness: 2px;
 
     &:hover {
-      background: color-mix(in srgb, var(--tertiaryAccent) 20%, var(--white) 80%);
+      background: color-mix(in srgb, var(--tertiaryAccent) 15%, var(--white) 85%);
     }
   }
 
