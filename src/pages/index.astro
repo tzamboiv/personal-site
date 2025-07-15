@@ -4,13 +4,14 @@ import Layout from "../layouts/Layout.astro";
 import headshot from "../assets/headshot.jpg";
 import "../styles/index.scss";
 import Profiles from "../components/Profiles.astro";
+import { Image } from "astro:assets";
 ---
 
 <Layout>
   <div class="container">
     <div class="headshot">
       <div class="frame-piece top"></div>
-      <img src={headshot.src} alt="Teddy Zamborsky headshot" />
+      <Image src={headshot} alt="Teddy Zamborsky headshot" />
       <div class="frame-piece bottom"></div>
     </div>
     <Content />
@@ -36,6 +37,7 @@ import Profiles from "../components/Profiles.astro";
   }
   img {
     object-fit: contain;
+    height: 100%;
     width: 100%;
     border-radius: 10% 0 10% 0px;
     padding: 5cqw;
