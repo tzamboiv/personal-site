@@ -7,3 +7,4 @@ In 2024, I earned my [MSc in Science, Technology and Society at University Colle
 Prior to UCL, I worked in the tech industry as a cloud solutions architect and earned a Bachelor of Science in Mathematics at the University of Chicago.
 
 Below you can find my email address as well as my profiles on various platforms. Feel free to reach out if there is anything you would like to discuss.
+
