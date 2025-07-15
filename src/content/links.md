@@ -3,13 +3,13 @@
 
 - <i><a href="https://zenodo.org/records/15118399" target="_blank">Visions, values, voices: a survey of artificial intelligence researchers</a></i>
 
-  I was part of a research group at UCL during my MSc that produced this survey of AI Researchers. To date, it is the largest survey of its kind. This is available as a preprint on Zenodo.
+  I was part of a research group at UCL during my MSc that produced this survey of AI researchers. To date, it is the largest survey of its kind. This is available as a preprint on Zenodo.
 
 - <a href="https://www.nature.com/articles/d41586-025-01123-x" target="_blank">Nature Magazine article about the _Visions_ surveys</a>
 
   The _Visions_ survey from above was covered in Nature Magazine.
 
-- [_Does PredPol Dream of Objectivity? A Critical Discourse Analysis of Objectivity in Predictive Policing Promotional Materials_](/TeddyZamborskyMScDissertation.pdf)
+- <a href=/TeddyZamborskyMScDissertation.pdf target="_blank"><i>Does PredPol Dream of Objectivity? A Critical Discourse Analysis of Objectivity in Predictive Policing Promotional Materials</i></a>
 
   This is a copy of my dissertation for my MSc from UCL.
 
@@ -19,6 +19,6 @@
 
 - <a href="https://boundary-work.com/issue-one" target="_blank"><i>BOUNDARY WORK ZINE</i> issue 1</a>
 
-  I helped to edit the first issue of <i>BOUNDARY WORK ZINE</i>, a zine that features writing that "collapse[s], contest[s] or ignore[s] completely" the boundary between science and art
+  I helped to edit the first issue of <i>BOUNDARY WORK ZINE</i>, a zine that features writing that "collapse[s], contest[s] or ignore[s] completely" the boundary between science and art.
 
 
