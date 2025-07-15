@@ -17,7 +17,7 @@ const getClass = (pageName: string) =>
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    gap: 1.5rem;
+    gap: 0.5rem;
     position: sticky;
     top: 0;
     background: linear-gradient(
@@ -31,6 +31,7 @@ const getClass = (pageName: string) =>
 
     @media (min-width: 483px) {
       justify-content: flex-start;
+      gap: 1.5rem;
     }
   }
 
@@ -38,10 +39,12 @@ const getClass = (pageName: string) =>
     color: var(--text);
     font-weight: bold;
     text-transform: uppercase;
-    text-decoration: none;
+    text-decoration-color: transparent;
 
     &.active {
-      text-decoration: underline double var(--primaryAccent) 2px;
+      text-decoration-style: double;
+      text-decoration-color: var(--primaryAccent);
+      text-decoration-thickness: 2px;
     }
 
     &:hover {
@@ -49,7 +52,9 @@ const getClass = (pageName: string) =>
     }
 
     &:hover:not(&.active) {
-      text-decoration: underline var(--primaryAccent) 2px;
+      text-decoration-style: underline;
+      text-decoration-color: var(--primaryAccent);
+      text-decoration-thickness: 2px;
     }
   }
 </style>

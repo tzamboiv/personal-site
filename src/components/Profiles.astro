@@ -1,0 +1,108 @@
+---
+import "../styles/index.scss";
+import { library, icon } from "@fortawesome/fontawesome-svg-core";
+import {
+  faOrcid,
+  faLinkedin,
+  faGoogleScholar,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
+library.add(faOrcid, faGoogleScholar, faLinkedin, faGithub, faEnvelope);
+const orcidIcon = icon({ prefix: "fab", iconName: faOrcid.iconName });
+const googleScholarIcon = icon({
+  prefix: "fab",
+  iconName: faGoogleScholar.iconName,
+});
+const linkedinIcon = icon({ prefix: "fab", iconName: faLinkedin.iconName });
+const gitHubIcon = icon({ prefix: "fab", iconName: faGithub.iconName });
+const emailIcon = icon({ prefix: "fas", iconName: faEnvelope.iconName });
+---
+
+<div class="profiles">
+  <a id="link-conversion" href="to-email-teddy">
+    <Fragment set:html={emailIcon?.html} />
+  </a>
+  <a
+    href="https://orcid.org/0009-0002-3849-6673"
+    target="_blank"
+    rel="nofollow, noindex"
+    title="ORCID"
+  >
+    <Fragment set:html={orcidIcon?.html} />
+  </a>
+  <a
+    href="https://scholar.google.com/citations?user=5doUO4EAAAAJ&hl=en"
+    target="_blank"
+    title="Google Scholar"
+  >
+    <Fragment set:html={googleScholarIcon?.html} />
+  </a>
+
+  <a href="https://github.com/tzamboiv/" target="_blank" title="GitHub">
+    <Fragment set:html={gitHubIcon?.html} />
+  </a>
+  <a
+    href="https://www.linkedin.com/in/tzamborsky/"
+    target="_blank"
+    title="LinkedIn"
+  >
+    <Fragment set:html={linkedinIcon?.html} />
+  </a>
+</div>
+
+<style lang="scss">
+  .profiles {
+    display: flex;
+    flex-direction: row;
+    height: 34px;
+    gap: 17px;
+    margin-top: 1rem;
+
+    a {
+      display: flex;
+      color: var(--tertiaryAccent);
+      transition: color 0.1s;
+
+      @keyframes bounce {
+        0% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      &:nth-child(1) {
+        animation: bounce 0.5s 0.1s;
+      }
+
+      &:nth-child(2) {
+        animation: bounce 0.5s 0.2s;
+      }
+
+      &:nth-child(3) {
+        animation: bounce 0.5s 0.3s;
+      }
+
+      &:nth-child(4) {
+        animation: bounce 0.5s 0.4s;
+      }
+
+      &:nth-child(5) {
+        animation: bounce 0.5s 0.5s;
+      }
+
+      &:hover {
+        background: transparent;
+        color: color-mix(in srgb, var(--tertiaryAccent) 90%, #000 10%);
+        color: var(--primaryAccent);
+      }
+    }
+  }
+</style>
