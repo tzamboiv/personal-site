@@ -52,6 +52,24 @@ const emailIcon = icon({ prefix: "fas", iconName: faEnvelope.iconName });
   </a>
 </div>
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const a = document.getElementById("link-conversion");
+    const href = a?.getAttribute("href");
+    if (a && href) {
+      a.setAttribute(
+        "href",
+        href
+          .replace("-", "zamborsky@")
+          .replace("email", "columbia")
+          .replaceAll("-", ".")
+          .replace("teddy", "edu")
+          .replace("to", "mailto:t.")
+      );
+    }
+  });
+</script>
+
 <style lang="scss">
   .profiles {
     display: flex;
