@@ -21,4 +21,7 @@
 
   I helped to edit the first issue of <i>BOUNDARY WORK ZINE</i>, a zine that features writing that "collapse[s], contest[s] or ignore[s] completely" the boundary between science and art.
 
+- <a href="https://sociology.columbia.edu/content/teddy-zamborsky" target="_blank">Profile on the Columbia Sociology Department website</a>
+
+  My PhD student profile on the Columbia Sociology department website.
 
