@@ -15,7 +15,7 @@
 
 - <a href="https://open.spotify.com/episode/4b6Krf3H1mgDahCYKrxKPk?si=aacc455190944cf6" target="_blank"><i>STS Microscope</i> podcast episode discussing my MSc research</a>
 
-  A friend from my MSc started a podcast where he plans to interview a few of us about our research. I was the first guest. 
+  A friend from my MSc started a podcast where he plans to interview a few of us about our research. I was the first guest.
 
 - <a href="https://boundary-work.com/issue-one" target="_blank"><i>BOUNDARY WORK ZINE</i> issue 1</a>
 
@@ -25,3 +25,6 @@
 
   My PhD student profile on the Columbia Sociology department website.
 
+- <a href="https://www.alterworkstudios.com/smile-on-3" target="_blank">"Smile on 3"</a>
+
+  Two of my film photos were part of this group exhibition.
